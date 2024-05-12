@@ -26,6 +26,7 @@ const Home = (props: { serverSets: Set[] }) => {
   const { data: sets, isLoading, isError } = useSets();
   return (
     <div>
+      
       <div className="m-2"> <Body /></div>
       <div className="px-3 lg:grid lg:grid-cols-4">
         {isLoading && "Loading...."}
@@ -37,7 +38,7 @@ const Home = (props: { serverSets: Set[] }) => {
               </div>
               <div className="text-center text-xl font-bold">{set?.name || "loading...."}</div>
               <div className="absolute flex justify-center items-center opacity-0 top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent group-hover:opacity-100 transition duration-300 ease-in-out">
-                <button className="px-4 py-1 rounded-[20px] bg-orange-500 text-white scale-125 group-hover:scale-100 duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 ">Quick View</button>
+                <button  className="px-4 py-1 rounded-[20px] bg-orange-500 text-white scale-125 group-hover:scale-100 duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 ">Quick View</button>
               </div>
             </div>
           );
@@ -45,6 +46,7 @@ const Home = (props: { serverSets: Set[] }) => {
         })}
         {isError && "Error"}
       </div>
+      
     </div>
   );
 
