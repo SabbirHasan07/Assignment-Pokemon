@@ -5,12 +5,8 @@ import { GetStaticProps } from "next";
 import { DehydratedState, QueryClient, dehydrate } from "@tanstack/react-query";
 import { QueryKeys } from "@/Services/enums";
 import { useSets } from "@/Services/Hooks";
-import { SparklesPreview } from "@/Components/Elements/SparklesPreview";
 import Body from "@/Components/Body/Body";
-
-
 export const getStaticProps: GetStaticProps<{ dehydratedState: DehydratedState; }> = async () => {
-  console.log("I AM SERVER");
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery({
     queryKey: [QueryKeys.sets],
@@ -19,14 +15,12 @@ export const getStaticProps: GetStaticProps<{ dehydratedState: DehydratedState; 
       return sets;
     },
   });
-  console.log("I am from server");
   return { props: { dehydratedState: dehydrate(queryClient) }, revalidate: 30 };
 };
 const Home = (props: { serverSets: Set[] }) => {
   const { data: sets, isLoading, isError } = useSets();
   return (
     <div>
-      
       <div className="m-2"> <Body /></div>
       <div className="px-3 lg:grid lg:grid-cols-4">
         {isLoading && "Loading...."}

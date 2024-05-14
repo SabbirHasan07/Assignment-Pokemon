@@ -6,10 +6,14 @@ export const getAllSets =  async () =>{
 }
 
 
-export const getSetById = async (setid: string ) => {
-  let set = await PokemonTCG.findSetByID(setid)
+export const getSetById = async (setId: string ) => {
+  let set = await PokemonTCG.findSetByID(setId)
   return set;
 }
 
-
+export const editSetName = async (setId: string, setName: string) => {
+   return new Promise((resolve, reject) => {
+     resolve("set edited");
+   });
+ };
 

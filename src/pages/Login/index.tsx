@@ -1,23 +1,28 @@
+
+
+
+import Image from "next/image";
 import Link from "next/link";
 
 const login = () => {
     return (
         <section className="bg-gray-50 dark:bg-gray-900">
+          
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
-                <div className="flex flex-col justify-center">
-                    <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">We invest in the world’s potential</h1>
-                    <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-                    <a href="#" className="text-blue-600 dark:text-blue-500 hover:underline font-medium text-lg inline-flex items-center">Read more about our app
-                        <svg className="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
+                <div className="flex flex-col justify-center mx-auto">
+                    <Image src={"https://i.ibb.co/nffg6SR/pokemon-va6139eg5csznzmw-removebg-preview.png"} alt="" height={600} width={600} />
+
                 </div>
                 <div>
                     <div className="w-full lg:max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow-xl dark:bg-gray-800">
-                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                            Sign in to <span className="text-orange-700">poke</span>mon
-                        </h2>
+                        <div>
+                            <div className="flex justify-between">
+                                <h2 className="text-2xl font-bold text-black dark:text-white">
+                                    Sign in to <span className="text-[#ddc153]">Poké</span><span className="text-blue-700">mon</span>
+                                </h2>
+                                <Image src={"https://i.ibb.co/gWkpzqc/images-removebg-preview-1.png"} alt="" height={150} width={150}/>
+                            </div>
+                        </div>
                         <form className="mt-8 space-y-6" action="#">
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
@@ -36,7 +41,7 @@ const login = () => {
                                 </div>
                                 <a href="#" className="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Lost Password?</a>
                             </div>
-                            <button type="submit" className="w-full px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
+                            <button type="submit" className="w-full px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-[#ddc153] focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
                             <div className="text-sm font-medium text-gray-900 dark:text-white">
                                 Not registered yet? <Link href='/signup' className="text-blue-600 hover:underline dark:text-blue-500">Create account</Link>
                             </div>
